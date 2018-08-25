@@ -1,0 +1,17 @@
+body.e---enshroud * {
+  background-color: #222 !important;
+  border-color: #777 !important;
+  color: #00a22b !important;
+}
+
+body.e---enshroud hr {
+  color: #777 !important;
+  background-color: #777 !important;
+  border-color: #777 !important;
+}
+
+body.e---enshroud h1, h2, h3, h4, h5, h6 {
+  color: #00b33c !important;
+  text-decoration: underline !important;
+}
+
