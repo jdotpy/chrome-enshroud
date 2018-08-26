@@ -18,7 +18,7 @@
         {
             "matches": ["<all_urls>"],
             "css": ["dark-styles.css"],
-            "js": ["contentScript.js"]
+            "js": ["content-script.js"]
         }
     ]
 }
