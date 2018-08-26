@@ -1,7 +1,12 @@
-body.e---enshroud * {
+body.e---enshroud, body.e---enshroud * {
   background-color: #222 !important;
+  background-image: none !important;
   border-color: #777 !important;
   color: #00a22b !important;
+}
+
+body.e---enshroud input {
+  border: solid 1px;
 }
 
 body.e---enshroud hr {
@@ -10,8 +15,8 @@ body.e---enshroud hr {
   border-color: #777 !important;
 }
 
-body.e---enshroud h1, h2, h3, h4, h5, h6 {
-  color: #00b33c !important;
+body.e---enshroud h1, body.e---enshroud h2, body.e---enshroud h3, body.e---enshroud h4, body.e---enshroud h5, body.e---enshroud h6 {
+  color: #44bb11 !important;
   text-decoration: underline !important;
 }
 
