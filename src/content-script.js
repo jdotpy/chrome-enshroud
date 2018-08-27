@@ -35,7 +35,7 @@ const ENSHROUD_TINT_ID = 'e---enshroud-tint';
   }
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'b' && event.altKey) {
+    if (event.keyCode === 66 && event.altKey) {
       cycleTint();
     }
   });
