@@ -35,18 +35,24 @@ body.e---enshroud h1, body.e---enshroud h2, body.e---enshroud h3, body.e---enshr
 
 #e---enshroud-reload-indicator {
   color: #00a22b;
-  font-family: ariel;
-  font-size: 3rem;
-  text-align: center;
+  padding: 1rem;
   display: none;
   position: fixed;
-  transform: rotate(180deg);
   top: 0px;
   right: 0px;
-  width: 3rem;
-  height: 3rem;
   background-color: black;
   opacity: .6;
   z-index: 10001;
   pointer-events: none;
 }
+
+#e---enshroud-reload-indicator-icon {
+  font-size: 4rem;
+  display: block;
+  animation: spin .5s linear infinite;
+}
+
+
+
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

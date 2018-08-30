@@ -40,8 +40,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 })();
 
 (function makeReload() {
-  console.log('initializing reload');
   const ENSHROUD_RELOAD_INDICATOR_ID = 'e---enshroud-reload-indicator';
+  const ENSHROUD_RELOAD_INDICATOR_ICON_ID = 'e---enshroud-reload-indicator-icon';
   const ENSHROUD_RELOAD_KEY = 'enshroud---reload';
   const RELOAD_INTERVAL = 5000;
   const reloadFunc = () => window.location.reload(true);
@@ -49,7 +49,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
   // Manage DOM element
   const indicator_ele = document.createElement('div');
-  indicator_ele.appendChild(document.createTextNode('\u21BB'));
+  const icon_ele = document.createElement('span');
+  icon_ele.appendChild(document.createTextNode('\u21BB'));
+  icon_ele.id = ENSHROUD_RELOAD_INDICATOR_ICON_ID;
+  indicator_ele.appendChild(icon_ele);
   indicator_ele.id = ENSHROUD_RELOAD_INDICATOR_ID;
   document.body.appendChild(indicator_ele);
 
@@ -57,25 +60,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     let ele = document.getElementById(ENSHROUD_RELOAD_INDICATOR_ID);
 
     if (reload_timeout_id === null) {
-      console.log('turning on reload');
       // Turn on
       ele.style.display = 'block';
       reload_timeout_id = setTimeout(reloadFunc, RELOAD_INTERVAL);
       window.sessionStorage.setItem(ENSHROUD_RELOAD_KEY, 'on');
     } else {
-      console.log('turning off reload');
       ele.style.display = 'none';
       clearTimeout(reload_timeout_id);
       reload_timeout_id = null;
       window.sessionStorage.setItem(ENSHROUD_RELOAD_KEY, 'off');
     }
-
-    const current = parseFloat(ele.style.opacity) || 0;
-    let newOpacity = current + .1;
-    if (newOpacity >= 1) {
-      newOpacity = 0;
-    }
-    ele.style.opacity = newOpacity;
   }
 
   // Get state from sessionStorage
