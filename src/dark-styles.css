@@ -32,3 +32,21 @@ body.e---enshroud h1, body.e---enshroud h2, body.e---enshroud h3, body.e---enshr
   z-index: 10000;
   pointer-events: none;
 }
+
+#e---enshroud-reload-indicator {
+  color: #00a22b;
+  font-family: ariel;
+  font-size: 3rem;
+  text-align: center;
+  display: none;
+  position: fixed;
+  transform: rotate(180deg);
+  top: 0px;
+  right: 0px;
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  opacity: .6;
+  z-index: 10001;
+  pointer-events: none;
+}
