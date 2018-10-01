@@ -5,6 +5,10 @@ body.e---enshroud, body.e---enshroud * {
   color: #00a22b !important;
 }
 
+body.e---enshroud, body.e---enshroud a {
+  color: #ccc !important;
+}
+
 body.e---enshroud input {
   border: solid 1px;
 }
